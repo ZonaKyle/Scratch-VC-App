@@ -12,7 +12,7 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
 
         //used to initialize peer
         function InitPeer(type){
-            let peer = new Peer({ initiator: (type == 'init') ? true : false, stream=stream, trickle: false})
+            let peer = new Peer({ initiator: (type == 'init') ? true : false, stream: stream, trickle: false})
             peer.on('stream', function(stream){
                 CreateVideo(stream)
             })

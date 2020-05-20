@@ -4,14 +4,15 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node server.js",
-    "watch": "npx watchify public/main.js -o public/bundle.js",
+    "start": "nodemon server.js",
+    "watch": "npx watchify public/main.js -o public/bundle.js -p errorify -v",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Kyle Adams",
   "license": "ISC",
   "dependencies": {
+    "errorify": "^0.3.1",
     "express": "^4.17.1",
     "simple-peer": "^9.7.2",
     "socket.io": "^2.3.0"
