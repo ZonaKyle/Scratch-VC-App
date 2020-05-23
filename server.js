@@ -4,6 +4,20 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 const port = process.env.PORT || 3000
 
+const Ministun = require("ministun");
+
+const stunConfig = {
+	udp4: true,
+	upd6: true,
+	port: 3478,
+	log: null,
+	err: null,
+	sw: true
+};
+
+const stunServer = new Ministun(stunConfig);
+
+
 app.use(express.static(__dirname + '/public'))
 let clients = 0
 
@@ -34,6 +48,13 @@ function SendOffer(offer){
 function SendAnswer(data){
     this.broadcast.emit('BackAnswer', data)
 
+}
+async function startServer() {
+	await server.start();
+}
+
+async function stopServer() {
+	await server.stop();
 }
 
 http.listen(port, () => console.log("Active on port " + port))
