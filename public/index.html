@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wooden Wheels</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
 
-    <p style = "font-family:georgia,garamond,serif;font-size:48px;font-style:bold;">
-        Wooden Wheelios
-     </p>
+    Wooden Wheelios
 
 </head>
 <body>
@@ -31,6 +30,16 @@
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="bundle.js"></script>
+    <!--etherpad embed script with chat AND the line numbers removed-->
+    <!--<iframe src='/etherpad-lite/start.bat' width=600 height=400></iframe>-->
 </body>
+<footer>
+    <audio id="sound1" src="QuickFart.wav" preload="auto"></audio>
+    <button class='btn btn-fart' 
+            type="button"
+            onclick="document.getElementById('sound1').play();"
+            >FART! </button>
+    </button>
+</footer>
 
 </html>
