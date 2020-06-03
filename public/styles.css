@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap") 
+@import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 
 *{
     box-sizing: border-box;
@@ -7,9 +7,13 @@
 html {
     background-color: rgba(200, 200, 200);
 }
-h1 {
+.logo {
     background-color: rgba(200, 200, 200);
     font-family: 'Poor Story', cursive;
+    font-size: 3em;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .btn{
@@ -22,6 +26,9 @@ h1 {
     border: 2px solid #000000;
     background-color: rgb(255, 0, 0);
     border-radius: 50%;
+    margin-inline-start: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     height:110px;
     width:110px;
     position: relative;
