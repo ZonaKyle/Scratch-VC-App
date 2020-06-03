@@ -6,6 +6,7 @@
 
 html {
     background-color: rgba(200, 200, 200);
+
 }
 .logo {
     background-color: rgba(200, 200, 200);
@@ -15,6 +16,41 @@ html {
     padding-bottom: 20px;
     padding-top: 20px;
 }
+/*
+.rowVar{
+    object-fit: cover;
+    border: 1px green;
+}
+.colVar{
+    object-fit: cover;
+    border: 4px red;
+}*/
+
+.embed-responsive{
+    position: relative; 
+    right: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    width: 200%; 
+    height: 200%; 
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* self video feed  
+.econtainer-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+
+ peer video feed  
+#peerDiv {
+    vertical-align: top;
+    width: 75%;
+}*/
 
 .btn{
     text-align: center;

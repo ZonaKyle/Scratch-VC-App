@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "watch": "npx watchify public/main.js -o public/bundle.js -p errorify -v",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
