@@ -16,41 +16,28 @@ html {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-/*
-.rowVar{
-    object-fit: cover;
-    border: 1px green;
-}
-.colVar{
-    object-fit: cover;
-    border: 4px red;
-}*/
 
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*video element style */
 .embed-responsive{
     position: relative; 
-    right: 0; 
-    bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    width: 200%; 
-    height: 200%; 
-    object-fit: cover;
+    width: 300%; 
+    height: 300%; 
+    /* object-fit: cover;*/
     overflow: hidden;
 }
 
-/* self video feed  
-.econtainer-fluid{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
+footer{
+    background-color: rgba(200, 200, 200);
 }
-
- peer video feed  
-#peerDiv {
-    vertical-align: top;
-    width: 75%;
-}*/
 
 .btn{
     text-align: center;
@@ -116,7 +103,7 @@ html {
     background-color: rgba(50, 50, 50);
     transform: rotate(45deg);
     z-index: -1;
-}/*
+}
 a.btn-fart { position: relative; }
 
 a:active.btn-fart {
