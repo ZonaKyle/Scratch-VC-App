@@ -16,38 +16,40 @@
 <body>
     
     <div class="container-fluid no-padding">
-        <div class="row rowVar d-flex align-items-stretch">
-            <div class="col-8 colVar d-flex justify-content-start">
+        <div class="row-fluid rowVar1 d-flex">
+            <div class="col-8 d-flex align-items-start justify-content-stretch">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <video class="embed-responsive-item" muted></video>
+                    <video class="embed-responsive-item selfVid" muted></video>
                 </div>
             </div>
             <div class="col-4 colVar d-flex align-items-start justify-content-stretch">
                 placeholder text for content
             </div>
         </div>
-        <div class="row rowVar d-flex align-items-start justify-content-stretch">
-            <div class="col-8 colVar d-flex align-items-start justify-content-stretch">
-                <div id ="peerDiv" class="embed-responsive embed-responsive-16by9">
+        <div class="row-fluid rowVar2 d-flex">
+            <div class="col-8 d-flex align-items-start justify-content-stretch">
+                <div id="peerDiv" class="embed-responsive embed-responsive-16by9">
+                    <video id="peerDiv" class="peerVid"></video>
                 </div>
             </div>
             <div class="col-4 colVar d-flex align-items-start justify-content-stretch">
                 placeholder text for content
             </div>
         </div>
-    </div>
+        <div class="row rowVar3 d-flex align-items-start justify-content-stretch">
+            <audio id="sound1" src="QuickFart.wav" preload="auto"></audio>
+            <button class='btn btn-fart' 
+                    type="button"
+                    onclick="document.getElementById('sound1').play();"
+                    >FART! </button>
+        </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="bundle.js"></script>
     <!--etherpad embed script with chat AND the line numbers removed-->
     <!--<iframe src='/etherpad-lite/start.bat' width=600 height=400></iframe>-->
 </body>
 <footer>
-    <audio id="sound1" src="QuickFart.wav" preload="auto"></audio>
-    <button class='btn btn-fart' 
-            type="button"
-            onclick="document.getElementById('sound1').play();"
-            >FART! </button>
-    </button>
+    <li><a href="camSetUp.html">But How?</a></li>
 </footer>
 
 </html>

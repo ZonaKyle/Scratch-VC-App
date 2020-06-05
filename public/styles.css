@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 html {
@@ -23,16 +23,25 @@ html {
     padding-top: 0;
     padding-bottom: 0;
 }
+.container-fluid{
+    height:100%;
+    width: 100%;
+}
+.rowVar1{
+    max-height: 433px; /*sloppy.  needs % to match other style*/
+}
+.rowVar2{
+    max-height: 433px; /*sloppy.  needs % to match other style*/
+}
 
-/*video element style */
-.embed-responsive{
-    position: relative; 
-    min-width: 100%; 
-    min-height: 100%;
-    width: 300%; 
-    height: 300%; 
-    /* object-fit: cover;*/
-    overflow: hidden;
+/*video element styles */
+.selfVid{
+    object-fit: cover;
+    max-height: 75%;
+}
+.embed-responsive-item{
+    object-fit: cover;
+    max-height: 75%;
 }
 
 footer{
