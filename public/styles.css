@@ -38,10 +38,16 @@ html {
 .selfVid{
     object-fit: cover;
     max-height: 75%;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
 }
-.embed-responsive-item{
+#peerVideo{
     object-fit: cover;
     max-height: 75%;
+    transform: rotateY(180deg);
+    -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+    -moz-transform:rotateX(180deg); /* Firefox */
 }
 
 footer{
