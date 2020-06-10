@@ -3,8 +3,21 @@ let socket = io()
 const video = document.querySelector('video')
 let client = {}
 
+//camera selection
+const getCameraSelection = async () => {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const videoDevices = devices.filter(device => device.kind === 'videoinput');
+    const options = videoDevices.map(videoDevice => {
+      return `<option value="${videoDevice.deviceId}">${videoDevice.label}</option>`;
+    });
+    cameraOptions.innerHTML = options.join('');
+};
+  
+
 //get stream
-navigator.mediaDevices.getUserMedia({video: true, audio: true})
+/*navigator.mediaDevices.getUserMedia({video: true, audio: true})*/
+if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia({video: true, audio: true})
+
     .then(stream => {
         socket.emit('NewClient')
         video.srcObject = stream
@@ -72,4 +85,13 @@ navigator.mediaDevices.getUserMedia({video: true, audio: true})
         socket.on('CreatePeer', MakePeer)
 
     })
-    .catch(err => document.write(err))
+    ) 
+        const updatedConstraints = {
+          ...constraints,
+          deviceId: {
+            exact: cameraOptions.value
+          }
+        }       
+    
+.catch(err => document.write(err));
+getCameraSelection();
