@@ -10,6 +10,20 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/favicon.ico">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+          // This function handles the response from the asynchronous call to getice.php
+          function onIceSuccess(data){
+              // Parse the JSON string. Then grab the value of v, which is the candidates
+              iceObj = JSON.parse(data).v;
+              // Pass the ICE candidates object to the constructor.
+              var pc = new RTCPeerConnection(iceObj);
+          }
+          $(document).ready(function(){
+               // Call post() to get the ICE candidates.
+               $.post("http://localhost/getice.php", null, onIceSuccess);
+          });
+    </script>
     
     <h1 class="logo no-padding">
         <img src="images/woodenwheels.png" alt=" " width="120" height="104.6">
