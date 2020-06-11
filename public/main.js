@@ -3,6 +3,18 @@ let socket = io()
 const video = document.querySelector('video')
 let client = {}
 
+// This function handles the response from the asynchronous call to getice.php
+function onIceSuccess(data){
+    // Parse the JSON string. Then grab the value of v, which is the candidates
+    iceObj = JSON.parse(data).v;
+    // Pass the ICE candidates object to the constructor.
+    var pc = new RTCPeerConnection(iceObj);
+}
+$(document).ready(function(){
+     // Call post() to get the ICE candidates.
+     $.post("getice.php", null, onIceSuccess);
+});
+
 //camera selection
 const getCameraSelection = async () => {
     const devices = await navigator.mediaDevices.enumerateDevices();
@@ -27,6 +39,7 @@ if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia({video: t
         function InitPeer(type){
             let peer = new Peer({ 
                 initiator: (type == 'init') ? true : false, 
+                /*CAN I ENTER 'iceObj' HERE AS SETTINGS? */
                 /*config: { iceServers: { urls: 'https://zonakyle:5cc95db4-9dc0-11ea-8d27-0242ac150003@global.xirsys.net/_turn/WoodenWheels' }},*/ 
                 stream: stream, 
                 trickle: false
