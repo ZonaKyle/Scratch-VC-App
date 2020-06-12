@@ -39,6 +39,7 @@ if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia({video: t
         function InitPeer(type){
             let peer = new Peer({ 
                 initiator: (type == 'init') ? true : false, 
+                iceObj,
                 /*CAN I ENTER 'iceObj' HERE AS SETTINGS? */
                 /*config: { iceServers: { urls: 'https://zonakyle:5cc95db4-9dc0-11ea-8d27-0242ac150003@global.xirsys.net/_turn/WoodenWheels' }},*/ 
                 stream: stream, 
