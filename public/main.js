@@ -45,7 +45,7 @@ if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia({video: t
                 stream: stream, 
                 trickle: false
             })
-            var pc = peer(iceObj); /*is this needed with the settings above?*/
+            /* var pc = peer(iceObj); is this needed with the settings above?*/
 
             peer.on('stream', function(stream){
                 CreateVideo(stream)
