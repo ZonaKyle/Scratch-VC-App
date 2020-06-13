@@ -8,6 +8,9 @@
     <title>Wooden Wheels</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+        <!-- counter default styles -->
+    <!--<link rel="stylesheet" href="Counter/counterStyles.css">-->
+
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,6 +30,16 @@
             </div>
             <div class="col-4 colVar d-flex align-items-start justify-content-stretch">
                 Hit F11 for full screen
+                <!--counter script-->
+                <div class="container">
+                    <h1>counter</h1>
+                    <span id="value">20</span>
+                    <div class="button-container">
+                      <button class="btn decrease">decrease</button>
+                      <button class="btn reset">reset</button>
+                      <button class="btn increase">increase</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row-fluid rowVar2 d-flex">
@@ -36,7 +49,16 @@
                 </div> 
             </div>
             <div class="col-4 colVar d-flex align-items-start justify-content-stretch">
-                Placeholder Text
+                <!--counter script-->
+                <div class="container">
+                    <h1>counter</h1>
+                    <span id="value2">20</span>
+                    <div class="button-container">
+                      <button class="btn godown">go down</button>
+                      <button class="btn startover">start over</button>
+                      <button class="btn goup">go up</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row rowVar3 d-flex align-items-start justify-content-stretch">
@@ -48,6 +70,7 @@
         </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="bundle.js"></script>
+    <script src="Counter/counterApp.js"></script>
     <!--etherpad embed script with chat AND the line numbers removed-->
     <!--<iframe src='/etherpad-lite/start.bat' width=600 height=400></iframe>-->
 </body>

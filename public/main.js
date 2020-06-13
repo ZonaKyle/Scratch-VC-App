@@ -40,11 +40,12 @@ if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia({video: t
             let peer = new Peer({ 
                 initiator: (type == 'init') ? true : false, 
                 /*CAN I ENTER 'iceObj' HERE AS SETTINGS? */
+                iceObj,
                 /*config: { iceServers: { urls: 'https://zonakyle:5cc95db4-9dc0-11ea-8d27-0242ac150003@global.xirsys.net/_turn/WoodenWheels' }},*/ 
                 stream: stream, 
                 trickle: false
             })
-            var pc = peer(iceObj);
+            var pc = peer(iceObj); /*is this needed with the settings above?*/
 
             peer.on('stream', function(stream){
                 CreateVideo(stream)
