@@ -2,6 +2,7 @@
 let count = 20;
 // select value and buttons
 const value = document.querySelector("#value");
+const value2 = document.querySelector("#value")
 const btns = document.querySelectorAll(".btn");
 
 btns.forEach(function (btn) {
