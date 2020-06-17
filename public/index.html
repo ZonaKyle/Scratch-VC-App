@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="images/favicon.ico">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="pluginsLibraries/jquery-3.5.1.min.js"></script>
        
     <h1 class="logo no-padding">
         <img src="images/woodenwheels.png" alt=" " width="616" height="104.4">
@@ -30,6 +30,13 @@
             </div>
             <div class="col-4 colVar d-flex align-items-start justify-content-stretch">
                 Hit F11 for full screen
+                
+                <button class='flipScreen' type='button'> Flip Screen </button>
+                <script>$('.flipScreen').on('click', function() {
+                    $('#peerDiv').toggleClass('flip');
+                    console.log('button clicked')
+                })</script>
+
                 <!--counter script
                 <div class="container">
                     <h1>counter</h1>

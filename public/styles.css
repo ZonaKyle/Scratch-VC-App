@@ -42,10 +42,18 @@ html {
 }
 #peerVideo{
     object-fit: cover;
-    max-height: 75%;
+    max-height: 100%;
+    -moz-transition: transform 2s;
+    -webkit-transition: transform 2s;
+    transition: transform 2s;
+}
+
+/* enable screen flip button */
+.flip {
     transform: rotateX(180deg);
     -webkit-transform:rotateX(180deg); /* Safari and Chrome */
     -moz-transform:rotateX(180deg); /* Firefox */
+    object-fit: cover;
 }
 
 .img-magnifier-container {
