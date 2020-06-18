@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <script src="pluginsLibraries/jquery-3.5.1.min.js"></script>
+
+    <script src="/zoomooz-master/jquery.zoomooz.min.js"></script>
        
     <h1 class="logo no-padding">
         <img src="images/woodenwheels.png" alt=" " width="616" height="104.4">
@@ -24,7 +26,14 @@
     
     <div class="container-fluid no-padding">
         <div class="row-fluid rowVar1 d-flex">
-            <div class="col-8 d-flex align-items-start justify-content-stretch">
+            <div class="col-8 d-flex align-items-start justify-content-stretch ">
+                <!-- Zoomooz target -->
+                <script>
+                $(document).ready(function() {
+                    $(".col-8").zoomTarget();
+                }); 
+                </script>
+
                 <div id="peerDiv" class="embed-responsive embed-responsive-16by9">
                 </div>
             </div>
