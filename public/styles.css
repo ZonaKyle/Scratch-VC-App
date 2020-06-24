@@ -24,6 +24,11 @@ html {
     padding-bottom: 0;
     margin: 0;
 }
+
+.loginPage {
+    background-image: url("\public\images\LoginBackground.JPG");
+    background-repeat: no-repeat;
+}
 .container-fluid{
     height:100%;
     width: 100%;
